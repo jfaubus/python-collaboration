@@ -14,7 +14,8 @@ if question == 1:
         ToDo = (additems(adding))
         print(ToDo)
         x += 1
-question = str(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
+question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
 
 if question == 2:
     print(ToDo)
+
