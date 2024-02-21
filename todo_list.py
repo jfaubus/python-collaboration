@@ -5,6 +5,10 @@ def changeCompleted(complete):
     dict[complete] = "done"
     return dict
 
+def deleteItems(delete):
+    del dict[delete]
+    return dict
+
 question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
 ToDo = {}
 dict = {}
@@ -28,3 +32,8 @@ if question == 3:
     ToDo = changeCompleted(complete)  
     print(ToDo)  
     question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
+
+if question == 4:
+    delete = input("What item would you like to delete?")
+    ToDo = deleteItems(delete)
+    print(ToDo)
