@@ -1,6 +1,9 @@
 def additems(input):
     dict[input] = "not done"
     return dict
+def changeCompleted(complete):
+    dict[complete] = "done"
+    return dict
 
 question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
 ToDo = {}
@@ -14,8 +17,14 @@ if question == 1:
         ToDo = (additems(adding))
         print(ToDo)
         x += 1
-question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
+    question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
 
 if question == 2:
     print(ToDo)
+    question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
 
+if question == 3:
+    complete = input("What item did you complete")
+    ToDo = changeCompleted(complete)  
+    print(ToDo)  
+    question = int(input("Click 1 to add new tasks, 2 to view all tasks, 3 to mark tasks as completed, and 4 to delete tasks "))
